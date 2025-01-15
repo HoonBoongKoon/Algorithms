@@ -1,10 +1,12 @@
-n = int(input())
+a=int(input())
+b=[]
+for i in range(a):
+    b.append(input()) 
+setb=set(b)
+b=list(setb)
 
-words = [str(input()) for i in range(n)]
+b.sort()
+b.sort(key=len)
 
-words = list(set(words))
-words.sort()
-words.sort(key=len)
-
-for i in words:
+for i in b:
     print(i)
